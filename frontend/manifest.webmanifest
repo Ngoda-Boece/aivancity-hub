@@ -1,0 +1,10 @@
+{
+  "name": "Aivancity Hub",
+  "short_name": "Hub",
+  "description": "Le portail étudiant d'Aivancity",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f1ea",
+  "theme_color": "#16150f",
+  "icons": [{ "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

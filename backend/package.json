@@ -1,22 +1,24 @@
 {
   "name": "aivancity-hub-backend",
-  "version": "1.0.0",
-  "description": "Aivancity Hub backend API",
-  "main": "server.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Aivancity Hub — API et serveur du portail étudiant",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test \"test/*.test.js\""
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "nodemailer": "^6.9.8",
-    "node-fetch": "^2.7.0",
-    "playwright": "^1.40.0"
+    "nodemailer": "^6.9.16"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.2"
+  "optionalDependencies": {
+    "playwright": "^1.49.1"
   }
 }

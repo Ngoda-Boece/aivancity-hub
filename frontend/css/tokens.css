@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Design tokens — single source of truth for colour, type, spacing, motion.
+   Light is the default; dark applies via OS preference or [data-theme].
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --bg: #f3f1ea;
+  --bg-sunken: #ebe8df;
+  --surface: #ffffff;
+  --surface-2: #faf9f5;
+  --line: #e2ded2;
+  --line-strong: #cbc6b8;
+
+  /* Ink */
+  --ink: #16150f;
+  --ink-2: #45433b;
+  --muted: #77746a;
+  --faint: #a3a094;
+  --on-accent: #ffffff;
+
+  /* Brand */
+  --accent: #ff4f1f;
+  --accent-ink: #d93a0e;
+  --accent-soft: #ffe6dc;
+  --cobalt: #2346ff;
+  --cobalt-soft: #e2e7ff;
+  --lime: #c8f03c;
+  --lime-ink: #3d4a00;
+
+  /* Status */
+  --ok: #0f9d68;
+  --ok-soft: #dcf5ea;
+  --warn: #c98700;
+  --warn-soft: #fbefd2;
+  --danger: #db3237;
+  --danger-soft: #fde2e2;
+
+  /* Event palette (categorical, used for course colours) */
+  --c1: #ff4f1f; --c2: #2346ff; --c3: #0f9d68; --c4: #b04bff; --c5: #e8a100; --c6: #0098b8;
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.9375rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  --fs-hero: clamp(2.25rem, 1.4rem + 3.6vw, 4rem);
+
+  /* Space & shape */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-1: 0 1px 0 rgba(22, 21, 15, 0.04), 0 1px 2px rgba(22, 21, 15, 0.06);
+  --shadow-2: 0 2px 4px rgba(22, 21, 15, 0.04), 0 12px 32px -8px rgba(22, 21, 15, 0.14);
+  --shadow-3: 0 24px 64px -12px rgba(22, 21, 15, 0.28);
+  --ring: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 180ms;
+
+  --sidebar-w: 248px;
+  --topbar-h: 64px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11110f;
+    --bg-sunken: #0b0b0a;
+    --surface: #1a1a17;
+    --surface-2: #20201c;
+    --line: #2d2c27;
+    --line-strong: #3e3d36;
+    --ink: #f3f1ea;
+    --ink-2: #cfccc1;
+    --muted: #9b988c;
+    --faint: #6d6a60;
+    --accent: #ff6a3d;
+    --accent-ink: #ff8a64;
+    --accent-soft: #3a1d12;
+    --cobalt: #7d93ff;
+    --cobalt-soft: #1c2242;
+    --lime-ink: #d8f56a;
+    --ok: #3ccf95; --ok-soft: #10302a;
+    --warn: #f0b93a; --warn-soft: #33290f;
+    --danger: #ff6b6f; --danger-soft: #3b1718;
+    --shadow-1: 0 1px 0 rgba(0, 0, 0, 0.3);
+    --shadow-2: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+    --shadow-3: 0 24px 64px -12px rgba(0, 0, 0, 0.75);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #11110f;
+  --bg-sunken: #0b0b0a;
+  --surface: #1a1a17;
+  --surface-2: #20201c;
+  --line: #2d2c27;
+  --line-strong: #3e3d36;
+  --ink: #f3f1ea;
+  --ink-2: #cfccc1;
+  --muted: #9b988c;
+  --faint: #6d6a60;
+  --accent: #ff6a3d;
+  --accent-ink: #ff8a64;
+  --accent-soft: #3a1d12;
+  --cobalt: #7d93ff;
+  --cobalt-soft: #1c2242;
+  --lime-ink: #d8f56a;
+  --ok: #3ccf95; --ok-soft: #10302a;
+  --warn: #f0b93a; --warn-soft: #33290f;
+  --danger: #ff6b6f; --danger-soft: #3b1718;
+  --shadow-1: 0 1px 0 rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+  --shadow-3: 0 24px 64px -12px rgba(0, 0, 0, 0.75);
+  color-scheme: dark;
+}

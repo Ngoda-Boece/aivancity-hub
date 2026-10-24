@@ -1,6 +1,7 @@
-backend/.env
-backend/node_modules/
-backend/package-lock.json
-**/__pycache__/
-*.pyc
+node_modules/
+.env
+backend/data/
+*.log
+*.lnk
 .DS_Store
+Thumbs.db
